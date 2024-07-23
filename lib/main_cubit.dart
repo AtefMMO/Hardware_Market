@@ -2,7 +2,8 @@ import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hardware_market/Features/Account_Screen/presentation/views/account_view.dart';
-import 'package:hardware_market/Features/History_Screen/presentation/views/history_view.dart';
+import 'package:hardware_market/Features/Order_Screen/presentation/views/order_view.dart';
+
 import 'package:meta/meta.dart';
 import 'Features/Home_Screen/presentation/views/home_view.dart';
 import 'Features/WishList_Screen/presentation/views/whishlist_view.dart';
@@ -27,7 +28,7 @@ class MainCubit extends Cubit<MainState> {
   List<Widget> screens = [
     const HomeView(),
     const WishListView(),
-    const HistoryView(),
+    const OrderView(),
     const AccountView(),
   ];
 }
