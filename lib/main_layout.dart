@@ -53,8 +53,8 @@ class BottomNavBar extends StatelessWidget {
             ),
             label: 'Wishlist'),
         BottomNavigationBarItem(
-          icon: Icon(Icons.restore_page_outlined),
-          label: 'History',
+          icon: Icon(Icons.shopping_bag),
+          label: 'Orders',
         ),
         BottomNavigationBarItem(
           icon: Icon(Icons.person_outlined),
