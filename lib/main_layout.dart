@@ -4,6 +4,7 @@ import 'package:hardware_market/Core/App_Theme/app_theme.dart';
 import 'package:hardware_market/main_cubit.dart';
 
 class MainLayout extends StatelessWidget {
+  static const String routeName = 'MainLayout';
   const MainLayout({super.key});
 
   @override
@@ -14,7 +15,7 @@ class MainLayout extends StatelessWidget {
         builder: (context, state) {
           final mainCubit = MainCubit.get(context);
           return Scaffold(
-            bottomNavigationBar:  BottomNavBar(),
+            bottomNavigationBar:  const BottomNavBar(),
             body: IndexedStack(//this helps in avoiding the rebuilding of the widgets when switching between tabs
               index: mainCubit.selectedIndex,
               children: mainCubit.screens,
