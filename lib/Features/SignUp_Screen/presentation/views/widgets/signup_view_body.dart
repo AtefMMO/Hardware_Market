@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hardware_market/Core/App_Theme/app_theme.dart';
 import 'package:hardware_market/Core/widgets/custom_button.dart';
 import 'package:hardware_market/Core/widgets/custom_form_field.dart';
+import 'package:hardware_market/Core/widgets/custom_password_form_field.dart';
 import 'package:hardware_market/Features/Login_Screen/presentation/views/login_view.dart';
 
 class SignUpViewBody extends StatelessWidget {
@@ -51,26 +52,20 @@ class SignUpViewBody extends StatelessWidget {
                   color: AppTheme.blueColor,
                 ),
               ),
-              CustomTextFormField(
+              CustomPasswordFormField(
                 labelText: 'Password',
                 hintText: 'Enter your password',
-                suffixIcon: Icon(
-                  Icons.visibility_off,
-                  color: AppTheme.blueColor,
-                ),
+
                 prefixIcon: Icon(
                   size: 40.r,
                   Icons.lock,
                   color: AppTheme.blueColor,
                 ),
               ),
-              CustomTextFormField(
+              CustomPasswordFormField(
                 labelText: 'Confirm Password',
                 hintText: 'Enter your password',
-                suffixIcon: Icon(
-                  Icons.visibility_off,
-                  color: AppTheme.blueColor,
-                ),
+
                 prefixIcon: Icon(
                   size: 50.r,
                   Icons.lock_reset,

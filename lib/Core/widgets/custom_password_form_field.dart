@@ -1,19 +1,31 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
 import '../App_Theme/app_theme.dart';
 
-class CustomTextFormField extends StatelessWidget {
-  String labelText;
-  String hintText;
-  Icon prefixIcon;
+class CustomPasswordFormField extends StatefulWidget {
+  final String labelText;
+  final String hintText;
+  final Icon prefixIcon;
 
-  CustomTextFormField({
-    super.key,
+  CustomPasswordFormField({
+    Key? key,
     required this.labelText,
     required this.hintText,
     required this.prefixIcon,
-  });
+  }) : super(key: key);
+
+  @override
+  _CustomPasswordFormFieldState createState() => _CustomPasswordFormFieldState();
+}
+
+class _CustomPasswordFormFieldState extends State<CustomPasswordFormField> {
+  bool _obscureText = true; // Track whether the text is obscured
+
+  void _toggleObscureText() {
+    setState(() {
+      _obscureText = !_obscureText; // Toggle the boolean
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -26,47 +38,43 @@ class CustomTextFormField extends StatelessWidget {
             width: 350.w,
             height: 50.h,
             child: TextFormField(
+              obscureText: _obscureText,
               decoration: InputDecoration(
-                labelText: labelText,
-                hintText: hintText,
+                labelText: widget.labelText,
+                hintText: widget.hintText,
+                suffixIcon: IconButton(
+                  icon: Icon(
+                    _obscureText ? Icons.visibility_off_outlined : Icons.visibility_outlined,
+                    color: AppTheme.blueColor,
+                  ),
+                  onPressed: _toggleObscureText,
+                ),
                 hintStyle: Theme.of(context).textTheme.bodySmall,
                 labelStyle: Theme.of(context).textTheme.bodySmall,
                 contentPadding: EdgeInsets.only(left: 94.w),
                 border: OutlineInputBorder(
                   borderSide: BorderSide(color: AppTheme.blueColor),
-                  borderRadius: BorderRadius.circular(
-                    25.r,
-                  ),
+                  borderRadius: BorderRadius.circular(25.r),
                 ),
                 focusedBorder: OutlineInputBorder(
                   borderSide: BorderSide(color: AppTheme.blueColor),
-                  borderRadius: BorderRadius.circular(
-                    25.r,
-                  ),
+                  borderRadius: BorderRadius.circular(25.r),
                 ),
                 errorBorder: OutlineInputBorder(
                   borderSide: BorderSide(color: AppTheme.redColor),
-                  borderRadius: BorderRadius.circular(
-                    25.r,
-                  ),
+                  borderRadius: BorderRadius.circular(25.r),
                 ),
                 focusedErrorBorder: OutlineInputBorder(
                   borderSide: BorderSide(color: AppTheme.redColor),
-                  borderRadius: BorderRadius.circular(
-                    25.r,
-                  ),
+                  borderRadius: BorderRadius.circular(25.r),
                 ),
                 disabledBorder: OutlineInputBorder(
                   borderSide: BorderSide(color: AppTheme.blueColor),
-                  borderRadius: BorderRadius.circular(
-                    25.r,
-                  ),
+                  borderRadius: BorderRadius.circular(25.r),
                 ),
                 enabledBorder: OutlineInputBorder(
                   borderSide: BorderSide(color: AppTheme.blueColor),
-                  borderRadius: BorderRadius.circular(
-                    25.r,
-                  ),
+                  borderRadius: BorderRadius.circular(25.r),
                 ),
               ),
             ),
@@ -77,7 +85,7 @@ class CustomTextFormField extends StatelessWidget {
             child: CircleAvatar(
               radius: 45.r,
               backgroundColor: AppTheme.secondaryColor,
-              child: prefixIcon,
+              child: widget.prefixIcon,
             ),
           ),
         ],
