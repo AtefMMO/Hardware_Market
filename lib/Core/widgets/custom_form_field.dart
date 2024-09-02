@@ -26,6 +26,7 @@ class CustomTextFormField extends StatelessWidget {
             width: 350.w,
             height: 50.h,
             child: TextFormField(
+              cursorColor: AppTheme.darkGrey,
               decoration: InputDecoration(
                 labelText: labelText,
                 hintText: hintText,

@@ -15,7 +15,7 @@ class MainLayout extends StatelessWidget {
         builder: (context, state) {
           final mainCubit = MainCubit.get(context);
           return Scaffold(
-            bottomNavigationBar:  const BottomNavBar(),
+            bottomNavigationBar: BottomNavBar(),
             body: IndexedStack(//this helps in avoiding the rebuilding of the widgets when switching between tabs
               index: mainCubit.selectedIndex,
               children: mainCubit.screens,
@@ -28,7 +28,7 @@ class MainLayout extends StatelessWidget {
 }
 
 class BottomNavBar extends StatelessWidget {
-  const BottomNavBar({
+  BottomNavBar({
     super.key,
   });
 

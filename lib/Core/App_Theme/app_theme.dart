@@ -8,7 +8,8 @@ class AppTheme {
   static Color unselectedBottomNavBar = const Color(0xff939393);
   static Color blueColor = const Color(0xff3780ED);
   static Color redColor = const Color(0xffFF0000);
-
+  static Color darkGrey = const Color(0xff939393);
+  static Color lightGrey = const Color(0xffC8C8CB);
   static final ThemeData appTheme = ThemeData(
       textTheme: const TextTheme(
           titleLarge: TextStyle(

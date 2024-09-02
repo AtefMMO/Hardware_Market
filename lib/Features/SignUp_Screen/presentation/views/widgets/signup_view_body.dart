@@ -5,6 +5,7 @@ import 'package:hardware_market/Core/widgets/custom_button.dart';
 import 'package:hardware_market/Core/widgets/custom_form_field.dart';
 import 'package:hardware_market/Core/widgets/custom_password_form_field.dart';
 import 'package:hardware_market/Features/Login_Screen/presentation/views/login_view.dart';
+import 'package:hardware_market/main_layout.dart';
 
 class SignUpViewBody extends StatelessWidget {
   const SignUpViewBody({super.key});
@@ -74,7 +75,13 @@ class SignUpViewBody extends StatelessWidget {
               ),
               CustomButton(
                 text: 'Login',
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushAndRemoveUntil(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const MainLayout()),
+                          (route) => false);
+                  },
                 color: AppTheme.blueColor,
                 textColor: Colors.white,
               ),
