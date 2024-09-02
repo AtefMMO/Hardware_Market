@@ -38,6 +38,7 @@ class _CustomPasswordFormFieldState extends State<CustomPasswordFormField> {
             width: 350.w,
             height: 50.h,
             child: TextFormField(
+              cursorColor: AppTheme.darkGrey,
               obscureText: _obscureText,
               decoration: InputDecoration(
                 labelText: widget.labelText,
