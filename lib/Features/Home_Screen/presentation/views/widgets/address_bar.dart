@@ -20,6 +20,8 @@ class AddressBar extends StatelessWidget {
               style: Theme.of(context).textTheme.bodySmall,
             ),
             DropdownButton<String>(
+                icon: Icon(Icons.keyboard_arrow_down_sharp),
+                iconSize: 20.r,
                 items: homeCubit.addresses.map((String value) {
                   return DropdownMenuItem<String>(
                     value: value,

@@ -10,6 +10,7 @@ class AppTheme {
   static Color redColor = const Color(0xffFF0000);
   static Color darkGrey = const Color(0xff939393);
   static Color lightGrey = const Color(0xffC8C8CB);
+  static Color offWhite=const Color(0xffFAFAFC);
   static final ThemeData appTheme = ThemeData(
       textTheme: const TextTheme(
           titleLarge: TextStyle(
@@ -19,6 +20,7 @@ class AppTheme {
           bodyLarge: TextStyle(
             fontSize: 14,
             color: Color(0xff393F42),
+            fontWeight: FontWeight.w500
           ),
           bodyMedium: TextStyle(
             fontSize: 12,

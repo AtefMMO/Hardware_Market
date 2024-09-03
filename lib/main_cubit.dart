@@ -24,7 +24,6 @@ class MainCubit extends Cubit<MainState> {
     selectedIndex = index;
     emit(ChangeSelectedIndexState());
   }
-
   List<Widget> screens = [
     const HomeView(),
     const WishListView(),
