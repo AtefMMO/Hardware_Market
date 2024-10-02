@@ -38,6 +38,7 @@ dependencies:
   flutter_bloc: ^8.1.6
   flutter_screenutil: ^5.9.3
   carousel_slider: ^5.0.0
+  dartz: ^0.10.1
 
 dev_dependencies:
   flutter_test:
