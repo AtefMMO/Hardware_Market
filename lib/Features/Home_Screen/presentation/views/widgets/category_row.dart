@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:hardware_market/Core/App_Theme/app_theme.dart';
 import 'package:hardware_market/Features/Home_Screen/presentation/views/widgets/category_item.dart';
 
 class CategoryRow extends StatelessWidget {
